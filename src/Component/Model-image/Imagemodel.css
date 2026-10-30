@@ -34,5 +34,16 @@
     @apply text-xl text-blue-400 font-bold mb-2
 }
  .allImages .box img{
-@apply w-[250px] rounded-xl 
+@apply w-[250px]  rounded-xl  cursor-pointer
+}
+.preview {
+  @apply fixed inset-0 flex items-center justify-center z-[9999] cursor-zoom-out;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.preview img {
+  @apply max-w-[90%] max-h-[90%] rounded-[10px];
+}
+.preview span{
+   @apply absolute top-5 right-6 text-white text-3xl font-bold cursor-pointer select-none hover:text-red-500 transition-colors duration-200
 }

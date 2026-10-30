@@ -24,10 +24,10 @@
     @apply text-[18px] mt-3
 }
 .about .topic .text ul {
-@apply list-disc mt-10 
+@apply  mt-10 
 }
 .about .topic .text ul li{
-    @apply mt-2 max-lg:text-[18px]
+    @apply mt-2 max-lg:text-[18px] 
 }
 .about .guests{
 @apply p-2 mt-[100px]

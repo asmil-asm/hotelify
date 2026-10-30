@@ -27,7 +27,7 @@
       { "name": "Cafe", "icon": "IoCafe" }
     ],
     "price": "$400",
-    "rate": 5,
+    "rate": 1,
     "description": "Located in the heart of London, this luxury hotel offers free WiFi in all areas, comfortable modern-style rooms, and a health club on site.",
     "Hotel_images": {
       "outImage": ["/assets/Hotels/Hotel1/hotel-out.webp"],
@@ -141,7 +141,7 @@
       { "name": "Gym & Crossfit", "icon": "IoIosFitness" }
     ],
     "price": "$850",
-    "rate": 5,
+    "rate": 2,
     "description": "Featuring iconic architecture and Panoramic views of Marina Bay, this luxury property offers world-class service and Michelin-starred dining experiences.",
     "Hotel_images": {
       "outImage": ["/assets/Hotels/Hotel2/hotel-out.webp"],
@@ -353,7 +353,7 @@
       { "name": "Timeless Spa", "icon": "LuHeater" }
     ],
     "price": "$1200",
-    "rate": 5,
+    "rate": 3,
     "description": "An exclusive eco-luxury resort secluded within desert dunes. Experience Arabian heritage with private pools and desert activities.",
     "Hotel_images": {
       "outImage": ["/assets/Hotels/Hotel4/hotel-out.webp"],
@@ -555,7 +555,7 @@
       { "name": "Tea Lounge", "icon": "IoCafe" }
     ],
     "price": "$720",
-    "rate": 5,
+    "rate": 2,
     "description": "Authentic Japanese hospitality combined with modern luxury. Enjoy private indoor thermal baths and seasonal local dining.",
     "Hotel_images": {
       "outImage": ["/assets/Hotels/Hotel6/hotel-out.webp"],
@@ -856,7 +856,7 @@
       { "name": "Heated Indoor Pool", "icon": "FaSwimmingPool" }
     ],
     "price": "$1650",
-    "rate": 5,
+    "rate": 3,
     "description": "An art-deco landmark built in 1928, nested near Champs-Élysées. Known for floral installations and lavish rooms.",
     "Hotel_images": {
       "outImage": ["/assets/Hotels/Hotel9/hotel-out.webp"],
@@ -957,7 +957,7 @@
       { "name": "Outdoor Heated Pool", "icon": "FaSwimmingPool" }
     ],
     "price": "$2100",
-    "rate": 5,
+    "rate": 3,
     "description": "Blended seamlessly into 600 acres of Utah's red-rock country, offering extreme privacy and dramatic canyon views.",
     "Hotel_images": {
       "outImage": ["/assets/Hotels/Hotel10/hotel-out.webp"],
@@ -1058,7 +1058,7 @@
       { "name": "Observatory & Cinema", "icon": "CiCircleMore" }
     ],
     "price": "$1800",
-    "rate": 5,
+    "rate": 2,
     "description": "An eco-friendly paradise in a UNESCO Biosphere Reserve. Features villa homes with ocean waterslides and private beaches.",
     "Hotel_images": {
       "outImage": ["/assets/Hotels/Hotel11/hotel-out.webp"],
@@ -1159,7 +1159,7 @@
       { "name": "Health Club & Spa", "icon": "IoIosFitness" }
     ],
     "price": "$980",
-    "rate": 5,
+    "rate": 3,
     "description": "Set in prestigious Mayfair, Claridge's embodies grand English heritage. Renowned for elegant decor and famous afternoon teas.",
     "Hotel_images": {
       "outImage": ["/assets/Hotels/Hotel12/hotel-out.webp"],
@@ -1260,7 +1260,7 @@
       { "name": "Indoor & Outdoor Pools", "icon": "FaSwimmingPool" }
     ],
     "price": "$1300",
-    "rate": 5,
+    "rate": 2,
     "description": "A legendary luxury ski resort in the Swiss Alps. Offers panoramic lake views, gourmet dining, and winter sports activities.",
     "Hotel_images": {
       "outImage": ["/assets/Hotels/Hotel13/hotel-out.jpg"],
@@ -1361,7 +1361,7 @@
       { "name": "Banyan Tree Spa", "icon": "LuHeater" }
     ],
     "price": "$750",
-    "rate": 5,
+    "rate": 1,
     "description": "Singapore's most iconic skyline hotel. Features the SkyPark infinity pool, luxury shopping mall, and over 40 restaurants.",
     "Hotel_images": {
       "outImage": ["/assets/Hotels/Hotel14/hotel-out.webp"],

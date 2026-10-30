@@ -34,7 +34,6 @@ setShaowAnsware: (index) =>
 setImages:()=>set((state)=>({images:!state.images})),
 setReadMore:()=>set((state)=>({readMore:!state.readMore})),
 setShowFilter:()=>set((state)=>({showFilter:!state.showFilter})),
-setShowMoudelroom:()=>set((state)=>({showMoudelroom:!state.showMoudelroom})),
 
 }
 ),

@@ -2,21 +2,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './Rooms.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FaStar } from "react-icons/fa";
-import { RiArrowRightSLine } from "react-icons/ri";
-import MoudelRoom from "./MoudelRoom";
-import { useState } from "react";
-import { useActions } from "../../store/useStore";
 import { useHotelsQuery } from '../../services/HandleAPI';
 import Loading from '../Loading/Loading';
+import './Rooms.css';
 
 const Rooms = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { showMoudelroom, setShowMoudelroom} = useActions();
-  const [useId, setId] = useState(null);
 
 
 
@@ -27,10 +21,7 @@ const Rooms = () => {
   const hotel = hotels.find((hotel) => String(hotel.id) === id);
   if (!hotel) return null;
 
-  const handleShowMoudel = (roomId) => {
-    setId(roomId);
-    setShowMoudelroom();
-  };
+ 
 
 
 
@@ -73,9 +64,7 @@ const Rooms = () => {
                 ))}
               </div>
 
-              <div onClick={() => handleShowMoudel(room.id)} className="more">
-                More Details <RiArrowRightSLine />
-              </div>
+             
 
              
 
@@ -95,12 +84,7 @@ const Rooms = () => {
         })}
       </div>
 
-      {showMoudelroom && (
-        <>
-          <div className="shadow" onClick={handleShowMoudel}></div>
-          <MoudelRoom useId={useId} />
-        </>
-      )}
+    
     </div>
   );
 };
