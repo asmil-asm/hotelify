@@ -1,29 +1,43 @@
 @import "tailwindcss";
 
-.common-question{
-     @apply mt-[100px] p-5
-}
-.common-question h2{
-        @apply text-4xl text-blue-950 font-bold mb-7  text-center
-
-}
-.common-question .info{
-        @apply  flex flex-col gap-y-3  p-3
-
+.common-question {
+  @apply mt-[100px] p-5;
 }
 
-.common-question .question{
-        @apply flex flex-row items-center border-1 border-blue-950 rounded-2xl
-        gap-2
-        p-2
+.common-question h2 {
+  @apply text-4xl text-blue-950 font-bold mb-7 text-center;
 }
-.common-question .question div:last-of-type{
-        @apply text-xl text-[#333]
+
+.common-question .info {
+  @apply flex flex-col gap-y-3 p-3;
 }
-.common-question .question div:first-of-type{
-        @apply text-xl text-blue-950 font-bold cursor-pointer
+
+.common-question .box {
+  @apply rounded-2xl overflow-hidden border border-blue-950/20 transition-shadow duration-300;
 }
-.common-question .info .answare
-{
-        @apply text-[#333] text-[18px] mt-2  p-2 duration-500 
+.common-question .box:hover {
+  @apply shadow-md;
+}
+
+.common-question .question {
+  @apply flex flex-row items-center gap-3 p-3 cursor-pointer
+         transition-colors duration-300 select-none;
+}
+.common-question .question:hover {
+  @apply bg-blue-50;
+}
+
+.common-question .question div:first-of-type {
+  @apply text-xl text-blue-950 font-bold;
+}
+
+.common-question .question div:last-of-type {
+  @apply text-xl text-[#333] flex-1;
+}
+
+.common-question .answare {
+  @apply overflow-hidden;
+}
+.common-question .answare-inner {
+  @apply text-[#333] text-[18px] p-3 pt-0 pl-10 leading-relaxed;
 }

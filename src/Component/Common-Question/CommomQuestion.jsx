@@ -1,10 +1,11 @@
 import { IoMdAdd } from "react-icons/io";
 import './CommonQuestion.css'
-// eslint-disable-next-line no-unused-vars
-import { motion, stagger } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useActions } from "../../store/useStore";
+
 export default function CommomQuestion() {
-  let {showAnsware,setShaowAnsware}=useActions()
+  const { showAnsware, setShaowAnsware } = useActions()
+
   let Questions=[
     {
       id:1,
@@ -34,31 +35,54 @@ answare:'It depends on the hotel policy and cancellation date. Please see the po
 
   ]
 
-
-  
-  
   return (
     <div className='common-question'>
-      <motion.h2 initial={{y:-50, opacity:0}}    whileInView={{ y:0, opacity:1 
- ,transition:{duration:3}}}>Common Questions</motion.h2>
+      <motion.h2
+        initial={{ y: -50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1, transition: { duration: 3 } }}
+      >
+        Common Questions
+      </motion.h2>
 
-    <motion.div initial={{x:-50,opacity:0}}
-whileInView={{x:0,opacity:1 ,transition:{duration:3}}}  className='info'>
-  {Questions.map((item,index)=>(
-<div
+      <motion.div
+        initial={{ x: -50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1, transition: { duration: 3 } }}
+        className='info'
+      >
+        {Questions.map((item, index) => (
+          <div className="box" key={index}>
+            <div
+              className="question"
+              onClick={() => setShaowAnsware(index)}
+            >
+              <motion.div
+                animate={{ rotate: showAnsware[index] ? 45 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <IoMdAdd />
+              </motion.div>
+              <div>{item.question}</div>
+            </div>
 
-   className="box" key={index}>
-<div className="question">
-<div><IoMdAdd onClick={()=>setShaowAnsware(index)}/></div>
-<div>{item.question}</div>
-</div>
-  {showAnsware[index]&& <div  className="answare">
-  {item.answare}
-</div>}
-</div>
-          ))}
-           
-        </motion.div>
+            <AnimatePresence initial={false}>
+              {showAnsware[index] && (
+                <motion.div
+                  className="answare"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                  style={{ overflow: "hidden" }}
+                >
+                  <div className="answare-inner">
+                    {item.answare}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
+      </motion.div>
     </div>
   )
 }
