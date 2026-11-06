@@ -10,7 +10,7 @@ const Filter = () => {
   const { showFilter, setShowFilter } = useActions();
   const loacation=useLocation();
   useEffect(()=>{
-    setShowFilter(false)
+    setShowFilter()
   },[loacation])
   const { 
     filter, 
