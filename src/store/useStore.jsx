@@ -33,7 +33,7 @@ setShaowAnsware: (index) =>
   setMenu:()=>set((state)=>({menu:!state.menu})),
 setImages:()=>set((state)=>({images:!state.images})),
 setReadMore:()=>set((state)=>({readMore:!state.readMore})),
-setShowFilter:()=>set((state)=>({showFilter:!state.showFilter})),
+setShowFilter:(value)=>set(()=>({showFilter:value})),
 
 }
 ),

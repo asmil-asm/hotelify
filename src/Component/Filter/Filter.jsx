@@ -10,7 +10,7 @@ const Filter = () => {
   const { showFilter, setShowFilter } = useActions();
   const loacation=useLocation();
   useEffect(()=>{
-    setShowFilter()
+    setShowFilter(false)
   },[loacation])
   const { 
     filter, 
@@ -130,8 +130,7 @@ const Filter = () => {
         </button>
       </div>
 
-      {/* Mobile Filter Button */}
-      <div className='filterIcons' onClick={setShowFilter}> 
+      <div className='filterIcons' onClick={()=>setShowFilter(true)}> 
         Filter <MdFilterList/>
       </div>
       
@@ -197,7 +196,7 @@ const Filter = () => {
           
           <div className="mobile-filter-buttons">
             <button className="reset-filter" onClick={() => resetFilter()}>Reset</button>
-            <button onClick={setShowFilter}>Close</button>
+            <button onClick={()=>setShowFilter(false)}>Close</button>
           </div>
         </div>
       )}
