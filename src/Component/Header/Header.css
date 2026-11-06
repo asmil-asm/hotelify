@@ -37,7 +37,6 @@ header .buttons button{
     cursor-pointer
 }
 
-/* Mobile */
 header h1{
     @apply  max-[885px]:text-[15px]
 }
@@ -48,29 +47,77 @@ header .full-screen{
 header .buttons{
     @apply max-[885px]:hidden
 }
-.Mobiles-header{
-    @apply flex items-center gap-x-2 hidden
-    max-[885px]:flex 
+/* Mobile Menu */
+.Mobiles-header {
+  @apply flex items-center gap-x-2 hidden
+  max-[885px]:flex 
 }
 
-.Mobiles-header .menu{
-    @apply cursor-pointer
+.Mobiles-header .menu-btn {
+  @apply cursor-pointer p-1.5 rounded-full
+  hover:bg-blue-100 transition-colors duration-200
 }
-.Mobiles-header .list{
-    @apply absolute left-0 top-[80px] w-full  bg-gray-200/80 flex flex-col
-     p-2 duration-75 z-10
+
+.Mobiles-header .menu {
+  @apply text-blue-950 text-2xl
 }
+
+.Mobiles-header .overlay {
+  @apply fixed inset-0 bg-black/40 backdrop-blur-sm
+  z-40
+}
+
+.Mobiles-header .list {
+  @apply fixed left-3 right-3 top-[75px] 
+  bg-white/95 backdrop-blur-xl
+  rounded-2xl shadow-2xl
+  flex flex-col p-4 
+  z-50 border border-blue-100
+}
+
+.Mobiles-header .list-header {
+  @apply flex items-center justify-between
+  pb-3 mb-2 border-b border-blue-100
+}
+
+.Mobiles-header .list-title {
+  @apply text-lg font-bold text-blue-950
+}
+
+.Mobiles-header .close-btn {
+  @apply flex items-center justify-center
+  w-9 h-9 rounded-full
+  bg-blue-50 text-blue-950 text-xl
+  cursor-pointer
+  hover:bg-blue-950 hover:text-white
+  transition-colors duration-200
+}
+
 .Mobiles-header .list ul {
-    @apply flex flex-col  w-full
+  @apply flex flex-col w-full gap-y-1
 }
-.Mobiles-header .list ul li{
-    @apply mt-3 p-2 border-b-1 border-blue-950 w-full
-    cursor-pointer text-blue-950
+
+.Mobiles-header .list ul li {
+  @apply py-3 px-4 rounded-xl
+  cursor-pointer text-blue-950 font-medium
+  transition-all duration-200
+  hover:bg-blue-50 hover:text-blue-900
+  hover:translate-x-1
 }
-.Mobiles-header .list .btns{
-    @apply flex justify-center items-center mt-3 gap-x-3
+
+.Mobiles-header .list ul a.active-link li {
+  @apply bg-blue-950 text-white
+  hover:bg-blue-900 hover:text-white
 }
-.Mobiles-header .list .btns button{
- @apply  bg-blue-900 text-white
-    rounded-2xl px-3 py-1.5
-    cursor-pointer}
+
+.Mobiles-header .list .btns {
+  @apply flex justify-center items-center mt-4 pt-4 
+  gap-x-3 border-t border-blue-100
+}
+
+.Mobiles-header .list .btns button {
+  @apply bg-blue-950 text-white
+  rounded-2xl px-5 py-2
+  cursor-pointer font-medium
+  hover:bg-blue-900 transition-colors
+}
